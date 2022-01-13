@@ -1,0 +1,52 @@
+.gövde {
+    background: #c0c7c9;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 40px;
+  }
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  .inp {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: red solid 1px;
+    background-color: #cecece;
+    color: white;
+    border-radius: 4px;
+  }
+  .inp:focus {
+    background-color: rgb(158, 106, 106);
+  }
+  label {
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  select {
+    width: 100%;
+    padding: 8px 12px;
+    border: red solid 1px;
+    border-radius: 4px;
+    background-color: #cecece;
+    font-size: 16px;
+  }
+  button {
+    background-color: #b64809;
+    border-radius: 4px;
+    color: white;
+    font-size: 20px;
+    padding: 16px 32px;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  .radio,
+  .box {
+    font-size: 20px;
+  }

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İlk Ders</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="gövde">
+      <h1>Lütfen Formu Eksiksiz Doldurunuz</h1>
+      <hr />
+
+      <h2>Hesap Bilgileriniz</h2>
+      <hr />
+
+      <table>
+        <tr>
+          <td style="width: 150px">
+            <label for="usarname">Kullanıcı Adı:</label>
+          </td>
+          <td style="width: 50px"></td>
+          <td><input type="text" id="usarname" class="inp" /></td>
+        </tr>
+        <tr>
+          <td><label for="eposta">Eposta:</label></td>
+          <td></td>
+          <td><input type="email" name="eposta" id="eposta" class="inp" /></td>
+        </tr>
+        <tr>
+          <td><label for="parola">Parola:</label></td>
+          <td></td>
+          <td><input type="password" id="parola" class="inp" /></td>
+        </tr>
+      </table>
+      <hr>
+      <h2>Diğer Bilgileriniz</h2>
+      <hr>
+      <table>
+        <tr>
+          <td>
+            <label for="">Sektöre Giriş Tarihi:</label>
+          </td>
+          <td style="width: 50px"></td>
+          <td>
+            <input class="inp" type="date" name="tarıh" id="tarıh">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="tecrübe" > Sektör Tecrübesi:</label>
+          </td>
+          <td style="width: 50px"></td>
+          <td>
+            <input type="radio" name="tecrübe" id="tecrübe">1-5 yıl
+            <br>
+            <input type="radio" name="tecrübe" id="tecrübe">6-10 yıl
+            <br>
+            <input type="radio" name="tecrübe" id="tecrübe">10+ yıl
+
+          </td>
+        </tr>
+      </table>
+      <hr />
+      <h2>Kişisel Bilgileriniz</h2>
+      <hr />
+      <table>
+        <tr>
+          <td style="width: 150px"><label for="name">Adınız:</label></td>
+          <td style="width: 50px"></td>
+          <td><input type="text" id="name" class="inp" /></td>
+        </tr>
+        <tr>
+          <td><label for="surname">Soyadınız:</label></td>
+          <td></td>
+          <td><input type="text" id="surname" class="inp" /></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="sehir">Yaşadığınız Şehir: </label>
+          </td>
+          <td></td>
+          <td>
+            <select id="sehir">
+              <option selected>Ankara</option>
+              <option>İstanbul</option>
+              <option>İzmir</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="cinsiyet">Cinsiyet:</label></td>
+          <td></td>
+          <td class="radio">
+            <input type="radio" name="cinsiyet" id="cinsiyet" />Erkek
+            <input type="radio" name="cinsiyet" id="cinsiyet" />Kadın
+          </td>
+        </tr>
+        <tr>
+          <td><label for="dersler">Sevdiğiniz Dersler</label></td>
+          <td></td>
+          <td class="box">
+            <input type="checkbox" name="dersler" id="dersler" />HTML
+            <input type="checkbox" name="dersler" id="dersler" />CSS
+            <input type="checkbox" name="dersler" id="dersler" />Javascript
+            <input type="checkbox" name="dersler" id="dersler" />Python
+          </td>
+        </tr>
+        <tr>
+          <td>
+           <label for="">Açıklama:</label>
+          </td>
+          <td></td>
+          <td>
+            <textarea style="resize: none;" name="" id="" cols="30" rows="10" class="inp"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td> 
+            <button style="margin-left:20%; padding: 5px;" type="submit">Kaydet</button>
+            <button style="padding: 5px;" type="reset">Temizle</button>
+          </td>
+        </tr>
+
+    </table>
+    </div>
+    <table></table>
+  </body>
+</html>
