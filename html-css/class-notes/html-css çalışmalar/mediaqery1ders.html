@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #777;
+            display: flex;
+            justify-content: flex-end;
+
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            margin: 5px;
+            margin-left: 10px;
+        }
+        section {
+            background-color: green;
+            border: 3px solid blue;
+            outline: 10px solid blueviolet;
+            display: flex;
+            padding: 50px;
+            width: 80%;
+            margin: auto;
+            margin-top: 40px;
+            justify-content: center;
+        }
+        .mobil{display: none;}
+        @media screen and (max-width: 922px) and (min-width:500px){
+            body{
+                background-color: rgb(219, 148, 219);
+            }
+            header{
+                justify-content: space-evenly;
+            }
+            header a{
+                font-size: 20px;
+                margin-right: 20px;
+
+            }
+
+            header a:hover{
+                font-size: 25px;
+                color: yellow;
+            }
+            section{
+                background-color: orange;
+                border-radius: 10px;
+                font-size: 24px;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            body{
+                margin-right: 0;
+                padding: 0;
+                background-color: yellow;
+            }
+            header{
+                flex-direction: column;
+                text-align: center;
+                margin-right: 0;
+                background-color: cyan;
+            }
+
+            header a{
+                border: 1px solid gray;
+                margin: 0px;
+                color: rgb(48, 47, 47);
+                padding: 3px;
+            }
+
+            header a:hover{
+                font-size: 20px;
+                color: black;
+                border: 3px solid gray;
+      
+            }
+            .desktop{
+                display: none;
+            }
+            .mobil{
+                display: block;
+                text-align: 12px;
+            }
+
+
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="Home">Home</a>
+        <a href="About">About</a>
+        <a href="Products">Products</a>
+        <a href="Contact">Contact</a>
+        
+    </header>
+    <section>
+        <h3 class="desktop">First make me smaller, then lost me!</h3>
+        <h3 class="mobil">This a magic!</h3>
+    </section>
+</body>
+</html>

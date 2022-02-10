@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    margin-left: 16px;    
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 75px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+header p{  
+    margin-bottom: 12px;
+    font-size: 24px;
+} 
+input{
+    margin-top: 12px;
+    margin-bottom: 16px; 
+}
+#name, #sname,#mail {
+    width: 175px;
+    padding: 4px 4px;
+}
+#name:focus{
+    background-color: blueviolet;
+    color: white;
+}
+.box1 input{
+    /* margin-bottom: 16px; */
+}
+br {
+    margin-bottom: 30px;
+}
+#role, #feature{
+    width: 175px;
+}
+ textarea {
+     resize: none;
+ }

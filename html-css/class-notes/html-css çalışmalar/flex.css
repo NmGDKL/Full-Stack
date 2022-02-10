@@ -1,0 +1,23 @@
+* {
+ margin: 0;
+ padding: 0;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+.flex-container {
+    display: flex;
+    background-color: blueviolet;
+    height: 400px;
+}
+
+.flex-items {
+    border: 1px solid green;
+    padding: 5px;
+    width: 75px;
+    height: 100px;
+    background-color: aqua;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/Google-favicon-2015.png">
+</head>
+<body>
+    <header>
+        <nav class="header-left">
+            <a href="#" class="header-links">About</a>
+            <a href="#" class="header-links">Store</a>
+        </nav>
+        <nav class="header-right">
+            <a href="#" class="header-links">Gmail</a>
+            <a href="#" class="header-links">Images</a>
+            <a href="" class="header-links"><img src="./images/appicon.png" alt="application_icon"></a> 
+            <button class="sign-in">Sign In</button>
+        </nav>
+    </header>
+    <main>
+        <img id="google" src="./images/googlelogo.png" alt="google logo">
+
+        <div class="search-bar">
+
+            <input type="text" name="search-bar" id="search">
+
+            <img id="mag" src="./images/magnifying_glass.jpg" alt="search-icon">
+
+            <a href="#">
+                <img src="./images/google_microphone.png" alt="microphone" id="microphone">
+            </a>
+        </div>
+
+        <div id="btn-container">
+            
+            <a class="btn1-link" target="_blank"><button id="btn1" type="button"> Google Search</button></a>
+            
+            <button id="btn2" type="button" name="button">I'm Feeling Lucky</button>
+        </div>
+        
+        <div class="lang">
+            <p id="language">Other Languages you can use Google: <a href="./index-turkish.html">Türkçe</a></p>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="country">Turkey</div>
+        <nav class="footer-left">
+            <a href="#" class="footer-links">Advertising</a>
+            <a href="#" class="footer-links">Business</a>
+            <a href="#" class="footer-links">How Search Works</a>
+        </nav>
+
+        <nav class="footer-right">
+            <a href="#" class="footer-links">Privacy</a>
+            <a href="#" class="footer-links">Terms</a>
+            <a href="#" class="footer-links">Settings</a>
+
+        </nav>
+    </footer>
+
+<script>
+let q = document.getElementById("search");
+document.getElementById('btn1').onclick = function() {
+    window.open('http://google.com/search?q='+q.value);
+};
+</script>
+</body>
+</html>
