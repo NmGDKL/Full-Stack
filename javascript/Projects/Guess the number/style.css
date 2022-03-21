@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('./image1.jpg');    
+    background-color: rgb(206, 154, 58);
+    position: relative;
+}
+.container {
+    background-color: aliceblue;
+    margin: 5% 35%;
+    width: 40%;
+    height: 70%;    
+}
+h1 {
+    padding-top: 10%;
+    width: 100%;    
+    text-align: center;
+}
+.numbers {
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;        
+}
+#sayı{
+    height: 30px;
+    border-radius: 5px;
+}
+#check {
+    height: 30px;
+    border-radius: 5px;
+    width: 75px;
+    background-color: blue;
+    color: aliceblue;
+}
+.text {
+    margin-top: 40%;
+    width: 100%;
+    text-align: center;
+    
+}
+h2 {
+    margin-bottom: 5%;
+}
+#count{
+    font-size: large;
+    padding-bottom: 10%;
+}
