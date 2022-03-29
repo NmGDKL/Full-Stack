@@ -1,8 +1,14 @@
 import React from 'react'
+import Button from "./button/Button"
 
 const MaterialUi = () => {
   return (
-    <div>MaterialUi</div>
+    
+    <div>
+
+    <Button/>
+
+    </div>
   )
 }
 
