@@ -10,7 +10,7 @@ class ClassComponent extends React.Component {
   dicrease = () => { this.setState({ count: this.state.count - 1 }) }
 
   // increase = () => this.setState({name:"Felix"})
-
+  
   componentDidMount() {
     console.log("Class Component mounted")
     this.increase()
