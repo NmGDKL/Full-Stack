@@ -1,66 +1,66 @@
-
 import { initializeApp } from "firebase/app";
-// import { getAuth } from "firebase/auth";
-import { getAuth, 
-    createUserWithEmailAndPassword, 
-    signInWithEmailAndPassword, 
-    signOut,
-    GoogleAuthProvider,
-    signInWithRedirect
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
 
-
-// TODO: Replace the following with your app's Firebase project configuration
-// See: https://firebase.google.com/docs/web/learn-more#config-object
-
-    const firebaseConfig = {
-        apiKey: "AIzaSyBIpFvOG-FAV7SwOEEEfWCbB1CLUsjavlY",
-        authDomain: "movie-app-ff33a.firebaseapp.com",
-        projectId: "movie-app-ff33a",
-        storageBucket: "movie-app-ff33a.appspot.com",
-        messagingSenderId: "861745453702",
-        appId: "1:861745453702:web:88e3ae7080b39c8cf38f07",
-        measurementId: "G-KRBH0E5PSH"
-    };
-
+//* https://firebase.google.com/docs/auth/web/start
+//* https://console.firebase.google.com/ => project settings
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
+};
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCg1fCEO8i7MQnM3SiMJPiVcADp_NI9XTw",
+//   authDomain: "movie-app-1-6ec44.firebaseapp.com",
+//   projectId: "movie-app-1-6ec44",
+//   storageBucket: "movie-app-1-6ec44.appspot.com",
+//   messagingSenderId: "950886341278",
+//   appId: "1:950886341278:web:f4feb188157227da55398f",
+// };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
 
 export const createUser = async (email, password, navigate) => {
-    try {
-        let userCredential = await createUserWithEmailAndPassword(auth, email, password)
-        navigate("/");
-        console.log(userCredential)
-    } catch (error) {
-        alert(error.message);
-    }
-}
-export const signIn = async (email, password, navigate) => {
- try {
-     let userCredential = await
-signInWithEmailAndPassword(auth, email, password);
-navigate("/");
-console.log(userCredential);
-} catch (error) {
-    alert(error.message);
-
-}
-};
-
-export const logOut = (navigate) => {
-    signOut(auth);
-    navigate("/login");
-};
-
-export const googleSignIn = async (navigate) => {
-    const provider = new GoogleAuthProvider();
-    provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-    signInWithRedirect(auth, provider);
+  try {
+    let userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
     navigate("/");
+    console.log(userCredential);
+  } catch (err) {
+    alert(err.message);
+  }
 };
 
+//* https://console.firebase.google.com/
+//* => Authentication => sign-in-method => enable Email/password
+export const signIn = async (email, password, navigate) => {
+  try {
+    let userCredential = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    navigate("/");
+    console.log(userCredential);
+  } catch (err) {
+    alert(err.message);
+  }
+};
+
+export const logOut = () => {
+  signOut(auth);
+  alert("logged out successfully");
+};
