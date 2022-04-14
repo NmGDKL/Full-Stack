@@ -12,13 +12,22 @@ import {
 
 //* https://firebase.google.com/docs/auth/web/start
 //* https://console.firebase.google.com/ => project settings
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBIpFvOG-FAV7SwOEEEfWCbB1CLUsjavlY",
+//   authDomain: "movie-app-ff33a.firebaseapp.com",
+//   projectId: "movie-app-ff33a",
+//   storageBucket: "movie-app-ff33a.appspot.com",
+//   messagingSenderId: "861745453702",
+//   appId: "1:861745453702:web:88e3ae7080b39c8cf38f07",
+// };
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBIpFvOG-FAV7SwOEEEfWCbB1CLUsjavlY",
-  authDomain: "movie-app-ff33a.firebaseapp.com",
-  projectId: "movie-app-ff33a",
-  storageBucket: "movie-app-ff33a.appspot.com",
-  messagingSenderId: "861745453702",
-  appId: "1:861745453702:web:88e3ae7080b39c8cf38f07"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
