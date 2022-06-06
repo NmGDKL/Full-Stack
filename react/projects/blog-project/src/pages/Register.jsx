@@ -40,15 +40,8 @@ const Register = () => {
 
   const handleGoogleSingIn = () => {
 
-    loginWithGoogle()
-    .then(() => {
-      navigate("/");
-      toastSuccessNotify("🦄 Logged in successfully!");
-    })
-    .catch((error) => {
-      toastErrorNotify(error);
-    }
-    );
+    loginWithGoogle(navigate)
+
   }
   return (
     <Container className="login-container">

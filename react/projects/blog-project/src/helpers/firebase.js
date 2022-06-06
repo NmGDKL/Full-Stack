@@ -7,12 +7,13 @@ import { getDatabase } from "firebase/database";
 
 //Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBFu6I5URJYULywLfVlRXvalTwPyMF9nrw",
-  authDomain: "blog-proje-59902.firebaseapp.com",
-  projectId: "blog-proje-59902",
-  storageBucket: "blog-proje-59902.appspot.com",
-  messagingSenderId: "931012807057",
-  appId: "1:931012807057:web:0a14f109d86604380df230"
+  apiKey: "AIzaSyCK82dS25Sj15tUwpJ21KToDTjYyZT8gWA",
+  authDomain: "react-blog-app-26457.firebaseapp.com",
+  databaseURL: "https://react-blog-app-26457-default-rtdb.firebaseio.com",
+  projectId: "react-blog-app-26457",
+  storageBucket: "react-blog-app-26457.appspot.com",
+  messagingSenderId: "582687630910",
+  appId: "1:582687630910:web:b5a99e22c58516d2e0536f"
 };
 
 // const firebaseConfig = {

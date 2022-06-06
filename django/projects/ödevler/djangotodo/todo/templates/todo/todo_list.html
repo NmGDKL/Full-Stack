@@ -1,0 +1,17 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+  <h2> TODO List </h2>
+    {% for todo in todos %}
+     <div>
+       <div style="display: inline-block; width: 100px;">
+          {{todo}}
+        </div>
+        <div style="display: inline-block;">
+          <a href="{% url 'update' todo.id %}"> Update</a>
+          <a href="{% url 'delete' todo.id %}"> Delete</a>
+        </div>  
+  </div> 
+    {% endfor %}
+{% endblock content %}
+  

@@ -1,6 +1,6 @@
 import { db } from "../helpers/firebase";
 import { createContext, useContext, useEffect, useState } from "react";
-import { ref, set, push, onValue, remove, update } from "firebase/database";
+import { ref, set, push, onValue, remove, update, getDatabase } from "firebase/database";
 import { AuthContext } from "./AuthContext";
 export const BlogContext = createContext();
 
@@ -18,24 +18,25 @@ export const BlogContextProvider = ({ children }) => {
   // });
 
   const addBlog = (posts) => {
-    // const db = getDatabase(app);
-    const blogRef = ref(db, "blogs");
+    const db = getDatabase();
+    const blogRef = ref(db, "db");
     const newBlogRef = push(blogRef);
     set(newBlogRef, {
       title: posts.title,
       imgUrl: posts.imgUrl,
       content: posts.content,
       user: posts.email,
-      addDate: Date.now(),
-      likeCount: 1,
-      commentCount: 2,
+      addDate: new Date.now(),
+      likeCount: 0,
+      commentCount: 0,
     });
+    console.log(newBlogRef);
   };
 
   const useFetch = () => {
     useEffect(() => {
       // const db = getDatabase(app);
-      const blogRef = ref(db, "blogs");
+      const blogRef = ref(db, "db");
       onValue(blogRef, (snapshot) => {
         const data = snapshot.val();
         const blogArray = [];

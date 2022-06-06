@@ -35,13 +35,6 @@ const Login = () => {
 
   const handleSubmit = (values, { resetForm }) => {
     login(values.email, values.password, navigate)
-      .then(() => {
-        navigate("/");
-        toastSuccessNotify("Logged in successfully!");
-      })
-      .catch((error) => {
-        toastErrorNotify(error);
-      });
     resetForm();
   };
   const handleGoogleSingIn = () => {
