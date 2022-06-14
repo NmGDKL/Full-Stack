@@ -26,7 +26,7 @@ def hello_world(request):
 def todoList(request):
     querset =  Todo.objects.all()    
     serializer = TodoSerializer(querset, many=True)
-   
+
     return Response(serializer.data)
 
 
@@ -79,7 +79,7 @@ def todoUpdate(request, pk):
         return Response(serializer.errors, status=status.HTTP_204_NO_CONTENT)
     
     elif request.method == "DELETE":
-      
+
         querset.delete()
         return Response("Item Deleted")
         
